@@ -7,27 +7,21 @@ class invalidInteger(Exception):
 def getLetterCriteria():
     print('Would you like your password to have uppercase letters, lowercase letters, both, or none?')
     letterCasing = int(input('1. Uppercase only \n2. Lowercase only \n3. Both uppercase and lowercase \n4. No letters \n'))
-    if letterCasing >= 5 :
-        raise invalidInteger
-    elif letterCasing <= 0:
+    if letterCasing >= 5 or letterCasing <= 0:
         raise invalidInteger
     return letterCasing
 
 def getNumberCriteria():
     print('Would you like your password to contain numbers?')
     containNumbers = int(input('1. Yes \n2. No\n'))
-    if containNumbers >= 3:
-        raise invalidInteger
-    elif containNumbers <= 0:
+    if containNumbers >= 3 or containNumbers <=0:
         raise invalidInteger
     return containNumbers
 
 def getSpecialCriteria():
     print('Would you like your password to contain special characters?')
     containSpecial = int(input('1. Yes \n2. No \n'))
-    if containSpecial >= 3:
-        raise invalidInteger
-    elif containSpecial <= 0:
+    if containSpecial >= 3 or containSpecial <= 0:
         raise invalidInteger
     return containSpecial
 
