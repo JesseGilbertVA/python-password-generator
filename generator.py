@@ -28,7 +28,7 @@ def getSpecialCriteria():
 def passwordLength():
     print('Lastly, please enter desired password length: ')
     lengthInput = int(input())
-    if lengthInput <= 0:
+    if lengthInput <= 0 or lengthInput >= 5000:
         raise invalidInteger
     return lengthInput
 
